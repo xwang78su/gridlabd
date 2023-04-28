@@ -118,3 +118,10 @@ I = ((Tc-Ta)/R_dc/Rca)**0.5*1000 # in Amp
 I = round(I)
 print("Ampacity (amp): " + str(I))
 
+# cal6: calculate the temperature given the current
+I_given = 700   # in amp
+print("The given current is: " + str(I_given) + "(in amp)")
+Tc_act = Ta + (I_given/1000)**2*R_dc*Rca  # in deg C
+Tc_act = round(Tc_act, 1)
+print("Cable core temperature is: " + str(Tc_act) + "(in deg C)")
+
